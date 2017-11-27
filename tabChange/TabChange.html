@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TabChange</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body ng-app="Tabs">
+	<div class="tabs" ng-controller="TabsController">
+		<nav>
+			<a href="javascript:;" ng-click="change('menu1')" ng-class="{ active:num=='menu1' }">menu1</a>
+			<a href="javascript:;" ng-click="change('menu2')">menu2</a>
+			<a href="javascript:;" ng-click="change('menu3')">menu3</a>
+			<a href="javascript:;" ng-click="change('menu4')">menu4</a>
+		</nav>
+		<div ng-switch on='num'>
+			<section class="cont" ng-switch-when='menu1'>
+				<ul>
+					<li><a href="javascript:;">menu1</a></li>
+					<li><a href="javascript:;">menu1</a></li>
+					<li><a href="javascript:;">menu1</a></li>
+					<li><a href="javascript:;">menu1</a></li>
+					<li><a href="javascript:;">menu1</a></li>
+					<li><a href="javascript:;">menu1</a></li>
+				</ul>
+			</section>
+			<section class="cont" ng-switch-when='menu2'>
+				<ul>
+					<li><a href="javascript:;">menu2</a></li>
+					<li><a href="javascript:;">menu2</a></li>
+					<li><a href="javascript:;">menu2</a></li>
+					<li><a href="javascript:;">menu2</a></li>
+					<li><a href="javascript:;">menu2</a></li>
+					<li><a href="javascript:;">menu2</a></li>
+				</ul>
+			</section>
+			<section class="cont" ng-switch-when='menu3'>
+				<ul>
+					<li><a href="javascript:;">menu3</a></li>
+					<li><a href="javascript:;">menu3</a></li>
+					<li><a href="javascript:;">menu3</a></li>
+					<li><a href="javascript:;">menu3</a></li>
+					<li><a href="javascript:;">menu3</a></li>
+					<li><a href="javascript:;">menu3</a></li>
+				</ul>
+			</section>
+			<section class="cont" ng-switch-when='menu4'>
+				<ul>
+					<li><a href="javascript:;">menu4</a></li>
+					<li><a href="javascript:;">menu4</a></li>
+					<li><a href="javascript:;">menu4</a></li>
+					<li><a href="javascript:;">menu4</a></li>
+					<li><a href="javascript:;">menu4</a></li>
+					<li><a href="javascript:;">menu4</a></li>
+					<li><a href="javascript:;">menu4</a></li>
+				</ul>
+			</section>
+		</div>
+    </div>
+    <script src="js/angular.min.js"></script>
+    <script>
+    	var Tabs = angular.module('Tabs',[]);
+    	Tabs.controller('TabsController',['$scope',function($scope){
+    		$scope.num = 'menu1';
+    		$scope.change = function(menu){
+    			$scope.num = menu;
+    		}
+    	}]);
+    </script>
+</body>
+</html>

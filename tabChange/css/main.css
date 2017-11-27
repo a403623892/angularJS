@@ -1,0 +1,56 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #F7F7F7;
+}
+
+.tabs {
+	width: 400px;
+	margin: 30px auto;
+	background-color: #FFF;
+	border: 1px solid #C0DCC0;
+	box-sizing: border-box;
+}
+
+.tabs nav {
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	overflow: hidden;
+	background-color: #C0DCC0;
+	display: flex;
+}
+
+nav a {
+	display: block;
+	width: 100px;
+	border-right: 1px solid #FFF;
+	color: #000;
+	text-decoration: none;
+}
+
+nav a:last-child {
+	border-right: 0 none;
+}
+
+nav a.active {
+	background-color: #ccc;
+}
+
+.cont {
+	overflow: hidden;
+}
+
+.cont ul {
+	list-style: none;
+	line-height: 30px;
+	padding: 10px 15px;
+}
+.cont ul a{
+	text-decoration: none;
+	color: #000;
+}
