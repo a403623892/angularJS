@@ -9,9 +9,9 @@
 	<div class="tabs" ng-controller="TabsController">
 		<nav>
 			<a href="javascript:;" ng-click="change('menu1')" ng-class="{ active:num=='menu1' }">menu1</a>
-			<a href="javascript:;" ng-click="change('menu2')">menu2</a>
-			<a href="javascript:;" ng-click="change('menu3')">menu3</a>
-			<a href="javascript:;" ng-click="change('menu4')">menu4</a>
+			<a href="javascript:;" ng-click="change('menu2')" ng-class="{active:num=='menu2'}">menu2</a>
+			<a href="javascript:;" ng-click="change('menu3')" ng-class="{active:num=='menu3'}">menu3</a>
+			<a href="javascript:;" ng-click="change('menu4')" ng-class="{active:num=='menu4'}">menu4</a>
 		</nav>
 		<div ng-switch on='num'>
 			<section class="cont" ng-switch-when='menu1'>
@@ -61,7 +61,9 @@
     <script>
     	var Tabs = angular.module('Tabs',[]);
     	Tabs.controller('TabsController',['$scope',function($scope){
+    		//初始化指向scope.num = menu1
     		$scope.num = 'menu1';
+    		//点击事件，设置获取menu值
     		$scope.change = function(menu){
     			$scope.num = menu;
     		}
